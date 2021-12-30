@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    mysql_dev:
+        image: mysql/mysql-server:latest
+        environment:
+          MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        ports:
+          - "3306:3306"
+        expose:
+          # Opens port 3306 on the container
+          - '3306'
+        volumes:
+          - $HOME/Projects/database/mysql-dev/conf.d:/etc/mysql/conf.d
+          - $HOME/Projects/database/mysql-dev/data:/var/lib/mysql
+        restart: unless-stopped
