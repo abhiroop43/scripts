@@ -1,7 +1,7 @@
 #!/bin/bash
 PHONE_IP=$1
 PHONE_PORT=$2
-echo "Starting Droidcam process with Audio only with IP $PHONE_IP and Port $PHONE_PORT"
+echo "Starting Droidcam process with Audio and Video with IP $PHONE_IP and Port $PHONE_PORT"
 
 droidcam-cli -a -v $PHONE_IP $PHONE_PORT &
 
