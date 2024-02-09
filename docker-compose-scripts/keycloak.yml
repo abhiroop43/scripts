@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  auth:
+    image: quay.io/keycloak/keycloak
+    ports:
+      - "8181:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command:
+      - start-dev
+    volumes:
+      - ~/Projects/keycloak/:/opt/keycloak/data/import/realm.json
+    restart: unless-stopped
