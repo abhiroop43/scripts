@@ -13,6 +13,7 @@ services:
       ZOOKEEPER_SERVERS: zoo1:2888:3888
     volumes:
       - ~/Projects/zookeeper/:/var/lib/zookeeper/
+    restart: unless-stopped
 
   kafka1:
     image: confluentinc/cp-kafka:7.3.2
@@ -41,3 +42,4 @@ services:
       - ~/Projects/kafka/secrets:/etc/kafka/secrets
     depends_on:
       - zoo1
+    restart: unless-stopped
