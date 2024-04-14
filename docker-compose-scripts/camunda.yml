@@ -7,8 +7,8 @@ services:
     ports:
       - 5080:8080
     volumes:
-      - ~/projects/camunda/data/:/camunda/data/
-      - ~/projects/camunda/log/:/camunda/log/
+      - ~/Projects/camunda/data/:/camunda/data/
+      - ~/Projects/camunda/log/:/camunda/log/
     networks:
       - camunda_go_net
 
