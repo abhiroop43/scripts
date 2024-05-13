@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   redis:
-    image: docker.io/bitnami/redis:7.2
+    image: redis
     container_name: redis
     hostname: redis
     restart: unless-stopped
