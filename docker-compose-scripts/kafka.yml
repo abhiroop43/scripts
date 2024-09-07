@@ -54,6 +54,7 @@ services:
     image: docker.io/bitnami/kafka:latest
     ports:
       - "9092:9092"
+    restart: unless-stopped
     volumes:
       - ~/Projects/kafka/data:/var/lib/kafka/data
       - ~/Projects/kafka/secrets:/etc/kafka/secrets
