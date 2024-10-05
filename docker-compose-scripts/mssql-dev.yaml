@@ -10,3 +10,4 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=${ROOT_PASSWORD}
+    restart: unless-stopped
