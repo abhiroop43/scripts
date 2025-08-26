@@ -46,13 +46,13 @@ else
   echo "Android Studio icon not found. Skipping."
 fi
 
-# Goland
-if [ -f "$HOME/.local/share/JetBrains/Toolbox/apps/goland/bin/goland.svg" ]; then
-  echo "Goland icon found"
+# dataspell
+if [ -f "$HOME/.local/share/JetBrains/Toolbox/apps/dataspell/bin/dataspell.svg" ]; then
+  echo "Dataspell icon found"
   echo "Deleting old icon..."
-  rm $HOME/.local/share/JetBrains/Toolbox/apps/goland/bin/goland.svg
+  rm $HOME/.local/share/JetBrains/Toolbox/apps/dataspell/bin/dataspell.svg
   echo "Linking theme icon..."
-  ln -s $HOME/.local/share/icons/candy-icons/apps/scalable/goland.svg $HOME/.local/share/JetBrains/Toolbox/apps/goland/bin/goland.svg
+  ln -s $HOME/.local/share/icons/candy-icons/apps/scalable/dataspell.svg $HOME/.local/share/JetBrains/Toolbox/apps/dataspell/bin/dataspell.svg
 else
-  echo "Goland icon not found. Skipping."
+  echo "Dataspell icon not found. Skipping."
 fi
