@@ -56,3 +56,14 @@ if [ -f "$HOME/.local/share/JetBrains/Toolbox/apps/dataspell/bin/dataspell.svg" 
 else
   echo "Dataspell icon not found. Skipping."
 fi
+
+# pycharm
+if [ -f "$HOME/.local/share/JetBrains/Toolbox/apps/pycharm/bin/pycharm.svg" ]; then
+  echo "Pycharm icon found"
+  echo "Deleting old icon..."
+  rm $HOME/.local/share/JetBrains/Toolbox/apps/pycharm/bin/pycharm.svg
+  echo "Linking theme icon..."
+  ln -s $HOME/.local/share/icons/candy-icons/apps/scalable/pycharm.svg $HOME/.local/share/JetBrains/Toolbox/apps/pycharm/bin/pycharm.svg
+else
+  echo "Pycharm icon not found. Skipping."
+fi
